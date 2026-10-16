@@ -1,17 +1,30 @@
 
 
 <!DOCTYPE html>
-<html lang="vi">
+<html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0;url=/KVN-IMPROVEMENT/">
-  <title>KVN Improvement</title>
+  <title>QR App</title>
+  <style>
+    body { margin: 0; }
+    iframe {
+      width: 100%;
+      height: 100vh;
+      border: none;
+    }
+  </style>
 </head>
 <body>
-  <p>Đang chuyển đến KVN Improvement...</p>
-  <p>
-    <a href="/KVN-IMPROVEMENT/">Mở hệ thống KVN Improvement</a>
-  </p>
+
+<iframe id="appFrame"></iframe>
+
+<script>
+  const path = window.location.pathname.split("/");
+
+  const url = "https://script.google.com/a/macros/krugersf.com/s/AKfycbxJ-EXnT0_nLz2rP7jVj2JivzYJ2uapBvPQBOehos1Q5_U6CsWZcjMTAwaAFOKXtkPiIg/exec";
+
+  document.getElementById("appFrame").src = url;
+</script>
+
 </body>
 </html>
