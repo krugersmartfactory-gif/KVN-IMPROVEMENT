@@ -1,18 +1,22 @@
 
-# KVN IMPROVEMENT
+# KVN Improvement
 
-Hệ thống đề xuất công cụ, dụng cụ, cải tiến, phản ánh và góp ý.
+Hệ thống tiếp nhận đề xuất công cụ, dụng cụ, cải tiến, phản ánh và góp ý tại Kruger Vietnam.
 
 ## Chức năng
-- Truy cập hệ thống KVN Improvement qua QR Code.
-- Gửi đề xuất và hình ảnh.
-- Theo dõi và xử lý đề xuất.
-- Gửi email thông báo tự động.
 
-## Nền tảng
+- Nhúng Google Apps Script Web App trong GitHub Pages.
+- Hỗ trợ hiển thị trên điện thoại và máy tính.
+- Giữ URL GitHub Pages khi ứng dụng được nhúng thành công.
+
+## Công nghệ
+
 - GitHub Pages
+- HTML, CSS, JavaScript
 - Google Apps Script
 - Google Sheets
 
-## Đơn vị
-Kruger Vietnam
+## Truy cập
+
+https://krugersmartfactory-gif.github.io/KVN-IMPROVEMENT/
+
