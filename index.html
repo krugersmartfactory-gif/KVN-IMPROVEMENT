@@ -1,122 +1,28 @@
-
 <!DOCTYPE html>
-<html lang="vi">
+<html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#075ca8">
-  <title>KVN Improvement</title>
-
+  <title>QR App</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html, body {
-      margin: 0;
-      padding: 0;
+    body { margin: 0; }
+    iframe {
       width: 100%;
-      height: 100%;
-      overflow: hidden;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f1f5f9;
-    }
-
-    #appFrame {
-      display: block;
-      width: 100%;
-      height: 100%;
-      height: 100dvh;
+      height: 100vh;
       border: none;
-      background: #fff;
-    }
-
-    #loading {
-      position: fixed;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 14px;
-      padding: 24px;
-      background: #f1f8ff;
-      color: #075ca8;
-      text-align: center;
-      z-index: 1;
-    }
-
-    .logo {
-      font-size: 30px;
-      font-weight: 800;
-    }
-
-    .spinner {
-      width: 34px;
-      height: 34px;
-      border: 4px solid #dbeafe;
-      border-top-color: #075ca8;
-      border-radius: 50%;
-      animation: spin .8s linear infinite;
-    }
-
-    .message {
-      font-size: 14px;
-      color: #475569;
-      line-height: 1.6;
-    }
-
-    .open-link {
-      color: #075ca8;
-      font-weight: bold;
-    }
-
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .spinner { animation: none; }
     }
   </style>
 </head>
-
 <body>
-  <div id="loading">
-    <div class="logo">KVN IMPROVEMENT</div>
-    <div class="spinner"></div>
-    <div class="message">
-      Đang tải hệ thống đề xuất cải tiến...
-    </div>
-    <div class="message">
-      Nếu không tải được, hãy
-      <a class="open-link"
-         href="https://script.google.com/a/macros/krugersf.com/s/AKfycbxJ-EXnT0_nLz2rP7jVj2JivzYJ2uapBvPQBOehos1Q5_U6CsWZcjMTAwaAFOKXtkPiIg/exec"
-         target="_blank" rel="noopener">
-        mở trực tiếp tại đây
-      </a>.
-    </div>
-  </div>
 
-  <iframe
-    id="appFrame"
-    title="KVN Improvement - Phiếu đề xuất cải tiến"
-    allow="clipboard-read; clipboard-write"
-    referrerpolicy="strict-origin-when-cross-origin">
-  </iframe>
+<iframe id="appFrame"></iframe>
 
-  <script>
-    const APP_URL =
-      "https://script.google.com/a/macros/krugersf.com/s/AKfycbxJ-EXnT0_nLz2rP7jVj2JivzYJ2uapBvPQBOehos1Q5_U6CsWZcjMTAwaAFOKXtkPiIg/exec";
+<script>
+  const path = window.location.pathname.split("/");
 
-    const frame = document.getElementById("appFrame");
-    const loading = document.getElementById("loading");
+  const url = "https://script.google.com/a/macros/krugersf.com/s/AKfycbxJ-EXnT0_nLz2rP7jVj2JivzYJ2uapBvPQBOehos1Q5_U6CsWZcjMTAwaAFOKXtkPiIg/exec";
 
-    frame.addEventListener("load", function () {
-      loading.style.display = "none";
-    });
+  document.getElementById("appFrame").src = url;
+</script>
 
-    frame.src = APP_URL;
-  </script>
 </body>
 </html>
